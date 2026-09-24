@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxsus So'rov</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #2f3640; /* Chiroyli to'q fon */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            color: #f5f6fa;
+        }
+        h1 {
+            font-size: 4rem; /* Katta harflar */
+            margin-bottom: 40px;
+            padding: 0 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        button {
+            font-size: 2rem;
+            padding: 15px 50px;
+            background-color: #e84118;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 8px 15px rgba(232, 65, 24, 0.4);
+        }
+        button:hover {
+            background-color: #c23616;
+            transform: scale(1.05);
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        /* Telefonda chiroyli ko'rinishi uchun moslashuvchanlik */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            button {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-text">Jonim to'yda o'ynamisan</h1>
+    <button id="action-btn" onclick="ozgartir()">Xoppp</button>
+
+    <script>
+        function ozgartir() {
+            const matn = document.getElementById('main-text');
+            const tugma = document.getElementById('action-btn');
+            
+            // Matnni o'zgartirish
+            matn.innerText = "Xayriyat endi xotirjam uxla";
+            // Tugmani yashirish
+            tugma.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
